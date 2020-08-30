@@ -1,7 +1,7 @@
 package remove;
 
-import LinkedList.LinkedList;
-import LinkedList.LinkedList.Node;
+import linkedList.LinkedList;
+import linkedList.LinkedList.Node;
 
 
 public class RemoveElement {

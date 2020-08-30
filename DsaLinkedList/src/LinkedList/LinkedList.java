@@ -1,4 +1,4 @@
-package LinkedList;
+package linkedList;
 
 public class LinkedList {
 	
@@ -18,7 +18,10 @@ public class LinkedList {
 	public void print(){
 		Node pHead = head;
 		while(pHead!=null){
-			System.out.print(pHead.data+"->");
+			if (pHead.getNext()==null)
+				System.out.print(pHead.data);
+			else
+				System.out.print(pHead.data+"->");
 			pHead = pHead.next;
 		}
 		
@@ -30,8 +33,20 @@ public class LinkedList {
 	}
 	
 	
+	public void setHead(Node head) {
+		this.head = head;
+	}
+	
+
+
+	public Node getCur() {
+		return cur;
+	}
+
+
+
 	public class Node {
-		int data;
+		public int data;
 		Node next;
 		
 		public Node(int data){
@@ -45,6 +60,7 @@ public class LinkedList {
 		public void setNext(Node next) {
 			this.next = next;
 		}
+		
 		
 	}
 }
